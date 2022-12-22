@@ -8,7 +8,9 @@ const emojis = ["😊,😂,🤣,❤️,😒,👌,💕,😁,👍,🙌,🤦‍♀�
 // Write password to the #password input,
  // Conditional statement to check if password length is a number.
  // Prompts end if this evaluates false
- //Made a variable for gen pass////
+ console.log(generateBtn)
+ 
+//Made a variable for gen pass//
 function generatePassword() {
 
 
@@ -23,12 +25,13 @@ return theword;
 return newPass(setpasswordlength(), makepassword());
 };
 
-
-//variable to
 function writePassword() {
 var passwordText = document.querySelector("#password");
-passwordText.value = " ";
-console.log(passwordlength);
+var thepass = 
+// passwordText.value = " ";
+// console.log(passwordlength);
+//variable to
+
 
 passwordText.addEventListener("click", passwordText)
 if(password < 8 || passwordlength > 128); {
