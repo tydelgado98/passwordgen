@@ -9,10 +9,11 @@ const emojis = ["😊,😂,🤣,❤️,😒,👌,💕,😁,👍,🙌,🤦‍♀�
  // Conditional statement to check if password length is a number.
  // Prompts end if this evaluates false
 
-var passwordlength = prompt("how long do you want this password?");
-console.log(passwordlength);
-var theword = "";
+
 function writePassword() {
+var theword = "";
+passwordText.addEventListener("click", passwordText)
+
 //variable to
 var passwordText = document.querySelector("#password");
 passwordText.value = " ";
@@ -39,4 +40,4 @@ alert("The password needs to be longer than 8, and lower than 128")
 }
 
 // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
