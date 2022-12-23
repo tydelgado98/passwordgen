@@ -8,7 +8,7 @@ const emojis = ["😊,😂,🤣,❤️,😒,👌,💕,😁,👍,🙌,🤦‍♀�
 var options ="0,1,2,3,4,5,6,7,8,9";
 
 //
-var passw = " ";
+var passw = "";
 function generatePassword() {
   passwordtxt = document.querySelector("#password")
   passwordtxt.value = " ";
@@ -54,27 +54,33 @@ if (hasSpecialCharacters) {
         }
         console.log(endpass);
         console.log(passwordlength);
-        console.log(endpass);
 for (var index=0; index < passwordlength; index++); {
 console.log(index);
 passw += endpass[Math.floor(Math.random() * endpass.length)]
 }
 
-return passw;
 }
 }
-
+var generateBtn = document.querySelector('#generate');
 // generatePassword();
 
-function typePassword() {
-  var passwordText = document.querySelector("#password");
-
+function writepassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
-
 }
+
+// function typePassword() {
+//   var passwordText = document.querySelector("#password");
+
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+
+//   passw.document.querySelector("#password");
+// }
 // if (hasEmojiCharacters < 0 || hasLowercaseCharacters < 0 
   //   || hasNumericCharacters < || hasSpecialCharacters < 0 || hasUppercaseCharacters < 0); {
   //   alert ("more");
