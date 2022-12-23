@@ -16,11 +16,11 @@ function generatePassword() {
   console.log(passwordlength);
 // addEventListener("click", generateBtn);
 // window.prompt("how long");
-
 if (passwordlength < 8 || passwordlength > 128) {
 
   alert("Password has to be over 8 & under 128")
 }
+else {
 var hasSpecialCharacters = confirm(
   'Click OK to confirm including special characters.'
 );
@@ -36,41 +36,59 @@ var hasUppercaseCharacters = confirm(
 var hasEmojiCharacters = confirm(
   'Click OK to confirm including emoji characters.'
 );
-var finalpass = [];
+var endpass = [];
 if (hasUppercaseCharacters) {
-finalpass = finalpass.concat(uppercase);
+endpass = endpass.concat(uppercase);
 }
 if (hasSpecialCharacters) {
-  finalpass = finalpass.concat(specialcharacters);
+  endpass = endpass.concat(specialcharacters);
   }
   if (hasLowercaseCharacters) {
-    finalpass = finalpass.concat(lowercase);
+    endpass = endpass.concat(lowercase);
     }
     if (hasNumericCharacters) {
-      finalpass = finalpass.concat(numbercharacter);
+      endpass = endpass.concat(numbercharacter);
       }
-};
+      if (hasEmojiCharacters) {
+        endpass = endpass.concat(emojis);
+        }
+        console.log(endpass);
+        console.log(passwordlength);
+        console.log(endpass);
+for (var index=0; index < passwordlength; index++); {
+console.log(index);
+passw += endpass[Math.floor(Math.random() * endpass.length)]
+}
 
- 
- // for (let i = 0; i < length; i++) {
- 
-// return newPass(setpasswordlength(), makepassword());
-// getPasswordOptions();
+return passw;
+}
+}
 
+// generatePassword();
 
+function typePassword() {
+  var passwordText = document.querySelector("#password");
 
-function setpasswordlength() {
-  // var thlength = 0;
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
 
 }
+// if (hasEmojiCharacters < 0 || hasLowercaseCharacters < 0 
+  //   || hasNumericCharacters < || hasSpecialCharacters < 0 || hasUppercaseCharacters < 0); {
+  //   alert ("more");
+ // for (let i = 0; i < length; i++) {
+// return newPass(setpasswordlength(), makepassword());
+// getPasswordOptions();
+// function setpasswordlength() {
+  // var thlength = 0;
 // console.log(passwordlength);
 //variable to
 // passwordText.addEventListener("click", passwordText)
 // if(password < 8 || passwordlength > 128); {
 // alert("The password needs to be longer than 8, and lower than 128")
-
   // var newPass = function(num, str) {
-    
   //   };
   // return theword;
 // getPasswordOptions();
