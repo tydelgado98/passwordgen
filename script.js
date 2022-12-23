@@ -36,13 +36,23 @@ var hasUppercaseCharacters = confirm(
 var hasEmojiCharacters = confirm(
   'Click OK to confirm including emoji characters.'
 );
-
-for (let i = 0; i < length; i++) {
- 
-
+var finalpass = [];
+if (hasUppercaseCharacters) {
+finalpass = finalpass.concat(uppercase);
+}
+if (hasSpecialCharacters) {
+  finalpass = finalpass.concat(specialcharacters);
+  }
+  if (hasLowercaseCharacters) {
+    finalpass = finalpass.concat(lowercase);
+    }
+    if (hasNumericCharacters) {
+      finalpass = finalpass.concat(numbercharacter);
+      }
 };
-};
+
  
+ // for (let i = 0; i < length; i++) {
  
 // return newPass(setpasswordlength(), makepassword());
 // getPasswordOptions();
